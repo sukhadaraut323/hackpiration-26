@@ -54,10 +54,16 @@ export default {
         glow: {
           primary: "hsl(var(--glow-primary))",
           secondary: "hsl(var(--glow-secondary))",
+          accent: "hsl(var(--glow-accent))",
         },
         surface: {
           dark: "hsl(var(--surface-dark))",
           darker: "hsl(var(--surface-darker))",
+        },
+        neon: {
+          pink: "hsl(var(--neon-pink))",
+          blue: "hsl(var(--neon-blue))",
+          green: "hsl(var(--matrix-green))",
         },
       },
       borderRadius: {

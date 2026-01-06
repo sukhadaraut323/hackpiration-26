@@ -16,8 +16,8 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             {/* Brand */}
             <div className="space-y-4">
-              <h3 className="font-mono text-lg font-semibold text-foreground">
-                Hack Aspire '26
+              <h3 className="font-mono text-lg font-bold text-foreground">
+                <span className="text-primary">HACK</span>PIRATION<span className="text-secondary">'26</span>
               </h3>
               <p className="text-sm text-muted-foreground">
                 A hackathon by MLSC VIT Pune under the Microsoft Learn Student Ambassador program.
@@ -62,7 +62,7 @@ const Footer = () => {
                 ))}
               </div>
               <p className="text-xs text-muted-foreground">
-                Tag us with <span className="text-primary">#HackAspire26</span>
+                Tag us with <span className="text-primary font-bold">#Hackpiration26</span>
               </p>
             </div>
           </div>
