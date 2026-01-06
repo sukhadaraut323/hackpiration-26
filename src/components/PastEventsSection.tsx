@@ -1,32 +1,57 @@
-const PastEventsSection = () => {
-  const placeholderEvents = Array(6).fill(null);
+import { ImageIcon, Calendar, MapPin } from "lucide-react";
 
+const pastEvents = [
+  { name: "Hackpiration'25", date: "Jan 2025", location: "VIT Pune" },
+  { name: "Code Sprint", date: "Oct 2024", location: "VIT Pune" },
+  { name: "AI Workshop", date: "Sep 2024", location: "Online" },
+  { name: "Web3 Bootcamp", date: "Aug 2024", location: "VIT Pune" },
+  { name: "DevFest '24", date: "Jul 2024", location: "VIT Pune" },
+  { name: "ML Challenge", date: "Jun 2024", location: "Online" },
+];
+
+const PastEventsSection = () => {
   return (
-    <section id="past-events" className="py-24 relative">
+    <section id="past-events" className="py-28 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-16">
           <h2 className="section-title">
+            <Calendar size={16} className="text-secondary" />
             <span>Past Events</span>
+            <Calendar size={16} className="text-secondary" />
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {placeholderEvents.map((_, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {pastEvents.map((event, index) => (
             <div
               key={index}
-              className="group relative aspect-video bg-card border border-border/50 rounded-xl overflow-hidden hover-glow transition-all duration-300"
+              className="group relative flex flex-col bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/40 hover:scale-[1.02]"
             >
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted/20 to-muted/5">
-                <span className="text-muted-foreground/40 font-mono text-sm">
-                  Event {index + 1}
-                </span>
+              {/* Image placeholder */}
+              <div className="relative h-40 bg-gradient-to-br from-muted/30 to-muted/10 flex items-center justify-center">
+                <ImageIcon size={40} className="text-muted-foreground/30" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {event.name}
+                </h3>
+                <div className="flex items-center gap-4 text-xs text-muted-foreground font-mono">
+                  <span className="flex items-center gap-1">
+                    <Calendar size={12} className="text-primary" />
+                    {event.date}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <MapPin size={12} className="text-secondary" />
+                    {event.location}
+                  </span>
+                </div>
+              </div>
               
-              {/* Bottom gradient */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background/80 to-transparent" />
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
         </div>
