@@ -1,12 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import HeroSection from "@/components/HeroSection";
+import PrizesSection from "@/components/PrizesSection";
+import AboutSection from "@/components/AboutSection";
+import SponsorsSection from "@/components/SponsorsSection";
+import TracksSection from "@/components/TracksSection";
+import ContestSection from "@/components/ContestSection";
+import TimelineSection from "@/components/TimelineSection";
+import PastEventsSection from "@/components/PastEventsSection";
+import WinnersSection from "@/components/WinnersSection";
+import TeamSection from "@/components/TeamSection";
+import FAQSection from "@/components/FAQSection";
+import RegisterSection from "@/components/RegisterSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Global background effects */}
+      <div className="fixed inset-0 grid-pattern opacity-20 pointer-events-none" />
+      <div className="fixed inset-0 scanline pointer-events-none opacity-30" />
+      
+      {/* Navigation */}
+      <Navigation />
+      <AnnouncementBar />
+
+      {/* Main content */}
+      <main>
+        <HeroSection />
+        <PrizesSection />
+        <AboutSection />
+        <SponsorsSection />
+        <TracksSection />
+        <ContestSection />
+        <TimelineSection />
+        <PastEventsSection />
+        <WinnersSection />
+        <TeamSection />
+        <FAQSection />
+        <RegisterSection />
+      </main>
+
+      <Footer />
     </div>
   );
 };
