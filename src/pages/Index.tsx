@@ -13,10 +13,13 @@ import TeamSection from "@/components/TeamSection";
 import FAQSection from "@/components/FAQSection";
 import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Custom cursor */}
+      <CustomCursor />
       {/* Global background effects */}
       <div className="fixed inset-0 grid-pattern opacity-20 pointer-events-none" />
       <div className="fixed inset-0 scanline pointer-events-none opacity-30" />
