@@ -60,13 +60,13 @@ const RegisterSection = () => {
             </div>
 
             <a
-              href="https://devfolio.co"
+              href="https://unstop.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-10 py-5 text-lg font-bold bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-xl transition-all duration-500 hover:shadow-[0_0_60px_hsl(var(--primary)/0.5)] hover:scale-105"
             >
               <Rocket size={22} className="transition-transform group-hover:-translate-y-1" />
-              <span className="uppercase tracking-wider">Register on Devfolio</span>
+              <span className="uppercase tracking-wider">Register on unstop</span>
               <ArrowRight
                 size={22}
                 className="transition-transform group-hover:translate-x-2"
